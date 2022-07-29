@@ -2,7 +2,7 @@ if [ "$1" = "-rebooted" ]; then
   {
     echo "Installing part 2/2."
     echo "Downloading script"
-    curl -H 'Authorization: token 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' -H 'Accept: application/vnd.github.v3.raw' -o /etc/init/customFanTemps -L "https://raw.githubusercontent.com/r00shy/auto-thermalset/main/customFanTemps.config"
+    curl -H 'Authorization: token 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' -H 'Accept: application/vnd.github.v3.raw' -o /etc/init/customFanTemps "https://raw.githubusercontent.com/r00shy/auto-thermalset/main/customFanTemps.config"
     echo "Starting service"
     initctl start customFanTemps
     initctl reload customFanTemps
